@@ -11,7 +11,7 @@ function CodeOutputBlock() {
 
     return (
      
-      <div id="code-output-block" className="w-50 d-flex flex-column">
+      <div id="code-output-block" className="d-flex flex-column">
         <CodeMirror
           value={currentTranspiledCode}
           className="h-100"

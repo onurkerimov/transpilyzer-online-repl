@@ -1,9 +1,10 @@
 import * as Babel from "@babel/standalone";
+import babelConfig from './babelConfig'
 
 const transplieCurrentInputCodeOnInit = (currentInputCode) => {
     let currentTranspiledCode = "";
     try {
-        currentTranspiledCode = Babel.transform(currentInputCode, { presets: ['env', 'react'] }).code;
+        currentTranspiledCode = Babel.transform(currentInputCode, babelConfig).code;
         return [
             currentTranspiledCode, {
                 show: false,

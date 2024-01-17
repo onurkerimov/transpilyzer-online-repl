@@ -1,5 +1,5 @@
 import setEditorThemeBasedOnTimeOfDay from "./setEditorThemeBasedOnTimeOfDay";
-import getSavedInputCode from "./getSavedInputCode";
+// import getSavedInputCode from "./getSavedInputCode";
 import transpileCurrentInputCodeOnInit from "./transpileCurrentInputCodeOnInit";
 
 const currentTheme = setEditorThemeBasedOnTimeOfDay(8, 18, {
@@ -7,7 +7,24 @@ const currentTheme = setEditorThemeBasedOnTimeOfDay(8, 18, {
     sunsetTheme: "darcula"
 })
 
-const currentInputCode = getSavedInputCode();
+const currentInputCode = `/** @jsx h */
+import Doja, { create, watch, h } from 'doja'
+
+const Counter = Doja(() => {
+  const $counter = create(0)
+  watch(() => console.log($counter.value))
+
+  return () => (
+    <button 
+      onClick={() => $counter.value++} 
+      style={{ border: '1px solid red' }}
+    >
+      count: {$counter.value}
+    </button>
+  )
+})`
+
+// getSavedInputCode();
 
 const [currentTranspiledCode, errorState] = transpileCurrentInputCodeOnInit(currentInputCode);
 
@@ -23,7 +40,7 @@ const initialCodeEditorState = {
         styleActiveLine: { nonEmpty: false },
         extraKeys: { 'Ctrl-/': 'toggleComment' },
         placeholder: "Type code here",
-        mode:  "javascript"
+        mode:  "jsx"
     },
     error: errorState
 }

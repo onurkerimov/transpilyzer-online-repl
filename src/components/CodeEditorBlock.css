@@ -1,6 +1,12 @@
 #editor-block-wrapper {
     height: 100%;
     overflow: hidden;
+    background: red;
+}
+#editor-block-wrapper > div {
+    background: white;
+    flex: 1;
+    margin: 0.5px;
 }
 
 #code-input-block .CodeMirror {
@@ -14,11 +20,29 @@
 }
 
 #code-input-block .react-codemirror2 {
-    min-height: 70%;
     height: 100%;
 
 }
 
 pre.CodeMirror-placeholder  { /* Most modern browsers support this now. */
    color: #ADAFAE !important;
+}
+
+.out {
+    display: flex;
+    flex-direction: column;
+}
+
+.out > * {
+    flex: 0 0 auto;
+}
+
+.react-codemirror2 {
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.out > .react-codemirror2 {
+    height: 140px;
+    border-bottom: 1px solid red;
 }

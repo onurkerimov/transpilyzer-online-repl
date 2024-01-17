@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import _ from 'lodash';
 import * as Babel from "@babel/standalone";
+import babelConfig from '../utils/babelConfig'
 
 import { Controlled as CodeMirror } from 'react-codemirror2';
 import ErrorAlert from './ErrorAlert';
@@ -19,7 +20,7 @@ function CodeInputBlock() {
   const transpileCode = (inputCode) => {
     try {
       
-      const transpiledOutputCode = Babel.transform(inputCode, { filename: 'repl.tsx', presets: ['env', 'react', 'typescript'] }).code;
+      const transpiledOutputCode = Babel.transform(inputCode, babelConfig).code;
   
       dispatch({type: "SET_OUTPUT_VALUE", payload: {transpiledOutputCode}});
     } catch (error) {
@@ -40,11 +41,11 @@ function CodeInputBlock() {
 
   useEffect(() => {
     debounceRef.current = _.debounce(transpileCode, 1000);
-  }, []);
+  }, [transpileCode]);
 
 
     return (
-      <div id="code-input-block" className="w-50 d-flex flex-column">
+      <div id="code-input-block" className="d-flex flex-column">
         <CodeMirror
           value={currentInputCode}
           // className="h-100"
