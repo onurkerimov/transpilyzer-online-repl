@@ -1,8 +1,8 @@
-# Doja Online REPL
+# Doja Online Playground
 
-This is the
+This is the online playground for [Doja](https://github.com/xoidlabs/doja), the first *headless framework* ever that lets you write components **ONCE**, then turn them into real **Vue** or **React** components.
 
 ### Thanks
 
-- Initially forked from: https://github.com/devDigestOfficial/transpilyzer-online-repl
+- The REPL is initially forked from: https://github.com/devDigestOfficial/transpilyzer-online-repl
 - https://github.com/samdenty/console-feed
