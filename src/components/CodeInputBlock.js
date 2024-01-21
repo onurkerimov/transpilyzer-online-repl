@@ -17,15 +17,12 @@ function camelize(str) {
 
 const setHash = (hash) => {
   if(window.history.pushState) {
-      window.history.pushState(null, null, hash);
-  }
-  else {
-    window.location.hash = hash;
+      window.history.pushState(null, null, '#'+ hash);
   }
 }
 
-function processHash(hash) {
-  if (hash.length < 20) {
+function processHash(hash, isPreset) {
+  if (isPreset) {
     return examples[camelize(hash)]
   } 
   return decodeURIComponent(hash)
@@ -36,8 +33,10 @@ function CodeInputBlock() {
   useEffect(() => {
     // Function to update state based on the URL hash
     const updateStateFromHash = () => {
+      console.log(window.location)
+      const isPreset = true
       const hash = window.location.hash.substring(1); // Exclude the '#' character
-      setCurrentInputCode(hash ? processHash(hash) : examples.counter);
+      setCurrentInputCode(hash ? processHash(hash, hash.length < 25) : examples.counter);
     };
 
     // Initial update when the component mounts
