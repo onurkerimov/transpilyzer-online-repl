@@ -7,7 +7,7 @@ function App() {
     <>
       <Helmet>
         <title>Doja Playground</title>
-        <meta name="description" content="Doja REPL is an online tool that is used for transpiling next generation JavaScript code into a backwards compatible version of JavaScript in real-time" />
+        <meta name="description" content="Doja Playground is an online tool for showcasing Doja, a headless framework, by creating React and Vue components in real-time" />
         <meta name="keywords" content="transpilyzer,babel,online repl, transpiler, compiler, javascript,ecmascript" />
       </Helmet>
       <HomePage />
