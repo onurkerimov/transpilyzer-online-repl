@@ -1,6 +1,8 @@
 #error-section {
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    max-height: 30%;
+    background: #a6364940;
+    margin: 0;
+    padding: 10px;
     overflow: auto;
 }

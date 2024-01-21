@@ -1,0 +1,185 @@
+:root {
+  --primary: #17181a;
+  --secondary: #a63649;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.col {
+ display: flex;
+ flex-flow: column wrap;
+}
+.row {
+ display: flex;
+ flex-flow: row wrap;
+}
+.flex-25 {
+ flex: 1;
+}
+
+.tagline {
+  color: #F5DFA5;
+}
+
+.tagline > div h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 100;
+}
+
+.tagline > div {
+  background: var(--secondary);
+  margin: 36px;
+  padding: 20px;
+  height: calc(100% - 72px);
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--secondary);
+}
+
+.flex-67 {
+ flex: 1;
+  padding: 20px;
+}
+.flex-8 {
+ height: 39px;
+  background: #000 !important;
+}
+.panel {
+ flex: 1;
+ position: relative;
+}
+
+body {
+ color: #8E95B4;
+ font-family: monospace;
+ line-height: 1.5;
+ padding: 0;
+ margin: 0;
+ background-color: var(--secondary);
+}
+
+.container {
+  min-height: 100vh;
+  gap: 1px;
+  display: flex;
+}
+
+.container > .row {
+  flex: 1;
+}
+
+.col, .row {
+  gap: 1px;
+}
+
+.tabbar, .panel, .tagline {
+  background: var(--primary);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-67 {
+  background: black;
+}
+.tabbar {
+  position: relative;
+}
+
+.title {
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  border-bottom: none;
+  position: absolute;
+  bottom: -1px;
+  left: 10px;
+  padding: 5px 15px;
+  user-select: none;
+}
+/* 
+@media (width>200px) {
+  .col {}
+} */
+.flex-251 {
+ flex: 1;
+}
+
+.react-codemirror2 {
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.CodeMirror {
+  height: 100%;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.cm-s-moxer.CodeMirror, .cm-s-moxer .CodeMirror-gutters {
+  background: transparent;
+}
+
+iframe {
+  border: 0;
+  background-color: #8E95B4;
+  flex: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 3;
+}
+
+.flex-2 > * {
+  flex: 1;
+}
+
+footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.px-1 {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.tabbar button {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  text-decoration: underline;
+  font-family: monospace;
+  color: #3F445A;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+a {
+  color: var(--secondary);
+}
+
+a:visited {
+  color: rebeccapurple;
+}
+
+.console {
+  background-color: rgb(28 30 39);
+}

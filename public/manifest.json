@@ -1,6 +1,6 @@
 {
-  "short_name": "Transpilyzer",
-  "name": "Transpilyzer Online REPL",
+  "short_name": "Doja",
+  "name": "Doja Online REPL",
   "icons": [
     {
       "src": "favicon.ico",

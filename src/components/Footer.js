@@ -8,15 +8,15 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <footer className="d-flex align-items-center text-muted bg-dark justify-content-center">&copy; {(new Date()).getFullYear()}, Made with
-            <span id="heart-icon" className="px-1 animated infinite pulse delay-2s" role="img" aria-label="heart icon">
+        <footer>&copy; {(new Date()).getFullYear()}, Made with
+            <span id="heart-icon" className="px-1" role="img" aria-label="heart icon">
                 <FontAwesomeIcon icon={faHeart}/>
-            </span> by clarnx
+            </span> by onurkerimov
             <span className="px-1" role="img" aria-label="arrow icon">
                 <FontAwesomeIcon icon={faArrowRight}/>
             </span>
-            <a href="https://github.com/clarnx" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faGithub} />
+            <a href="https://github.com/onurkerimov" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} color='white' />
             </a>
         </footer>
   );

@@ -16,6 +16,7 @@
     "animate.css": "^4.1.0",
     "browser-cjs": "^1.0.3",
     "codemirror": "^5.55.0",
+    "console-feed": "^3.5.0",
     "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-codemirror2": "^7.2.1",
@@ -26,7 +27,8 @@
   },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build"
+    "build": "vite build",
+    "serve": "vite serve"
   },
   "eslintConfig": {
     "extends": "react-app"
